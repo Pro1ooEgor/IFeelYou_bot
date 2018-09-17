@@ -1,0 +1,120 @@
+INFO:root:START
+ERROR:TeleBot:ConnectionError occurred, args=(MaxRetryError("HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot615773178:AAHUIX7K59zMi1uKzjNQw221fT1bRSe90rY/getUpdates?offset=1&timeout=20 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f44107be630>: Failed to establish a new connection: [Errno 101] Network is unreachable',))",),)
+Traceback (most recent call last):
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/connection.py", line 171, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/util/connection.py", line 79, in create_connection
+    raise err
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/util/connection.py", line 69, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 849, in _validate_conn
+    conn.connect()
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/connection.py", line 314, in connect
+    conn = self._new_conn()
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/connection.py", line 180, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x7f44107be630>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/requests/adapters.py", line 445, in send
+    timeout=timeout
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot615773178:AAHUIX7K59zMi1uKzjNQw221fT1bRSe90rY/getUpdates?offset=1&timeout=20 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f44107be630>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/telebot/util.py", line 59, in run
+    task(*args, **kwargs)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/telebot/__init__.py", line 276, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/telebot/__init__.py", line 246, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/telebot/apihelper.py", line 180, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/telebot/apihelper.py", line 54, in _make_request
+    timeout=(connect_timeout, read_timeout), proxies=proxy)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/requests/sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/requests/sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/requests/adapters.py", line 513, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot615773178:AAHUIX7K59zMi1uKzjNQw221fT1bRSe90rY/getUpdates?offset=1&timeout=20 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f44107be630>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+INFO:root:(MaxRetryError("HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot615773178:AAHUIX7K59zMi1uKzjNQw221fT1bRSe90rY/getUpdates?offset=1&timeout=20 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f44107be630>: Failed to establish a new connection: [Errno 101] Network is unreachable',))",),)
+INFO:root:FINISH
+INFO:root:START
+ERROR:TeleBot:ConnectionError occurred, args=(MaxRetryError("HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot615773178:AAHUIX7K59zMi1uKzjNQw221fT1bRSe90rY/getUpdates?offset=1&timeout=20 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f04daeae630>: Failed to establish a new connection: [Errno 101] Network is unreachable',))",),)
+Traceback (most recent call last):
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/connection.py", line 171, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/util/connection.py", line 79, in create_connection
+    raise err
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/util/connection.py", line 69, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 849, in _validate_conn
+    conn.connect()
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/connection.py", line 314, in connect
+    conn = self._new_conn()
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/connection.py", line 180, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x7f04daeae630>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/requests/adapters.py", line 445, in send
+    timeout=timeout
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot615773178:AAHUIX7K59zMi1uKzjNQw221fT1bRSe90rY/getUpdates?offset=1&timeout=20 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f04daeae630>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/telebot/util.py", line 59, in run
+    task(*args, **kwargs)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/telebot/__init__.py", line 276, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/telebot/__init__.py", line 246, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/telebot/apihelper.py", line 180, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/telebot/apihelper.py", line 54, in _make_request
+    timeout=(connect_timeout, read_timeout), proxies=proxy)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/requests/sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/requests/sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/user/PycharmProjects/IFeelYou/venv/lib/python3.6/site-packages/requests/adapters.py", line 513, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot615773178:AAHUIX7K59zMi1uKzjNQw221fT1bRSe90rY/getUpdates?offset=1&timeout=20 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f04daeae630>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+INFO:root:(MaxRetryError("HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot615773178:AAHUIX7K59zMi1uKzjNQw221fT1bRSe90rY/getUpdates?offset=1&timeout=20 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f04daeae630>: Failed to establish a new connection: [Errno 101] Network is unreachable',))",),)
+INFO:root:FINISH
