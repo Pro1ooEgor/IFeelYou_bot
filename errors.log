@@ -825,3 +825,83 @@ INFO:root:START
 INFO:root:START
 INFO:root:START
 INFO:root:START
+INFO:root:START
+INFO:root:dict_keys([])
+INFO:root:Sent /stop + added new user 345453013
+INFO:root:START
+INFO:root:dict_keys([])
+INFO:root:Sent /stop + added new user 345453013
+INFO:root:START
+INFO:root:dict_keys([])
+INFO:root:Sent /stop + added new user 345453013
+INFO:root:START
+INFO:root:dict_keys([])
+INFO:root:Sent /stop + added new user 345453013
+INFO:root:dict_keys([345453013])
+ERROR:TeleBot:ReadTimeout occurred, args=(ReadTimeoutError("HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=30)",),)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 384, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 380, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 1009, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 871, in read
+    return self._sslobj.read(len, buffer)
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 631, in read
+    v = self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\requests\adapters.py", line 445, in send
+    timeout=timeout
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\util\retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\packages\six.py", line 686, in reraise
+    raise value
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 306, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\__init__.py", line 276, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\__init__.py", line 246, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 180, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 54, in _make_request
+    timeout=(connect_timeout, read_timeout), proxies=proxy)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\requests\sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\requests\sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\requests\adapters.py", line 526, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=30)
+
+INFO:root:(ReadTimeoutError("HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=30)",),)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:dict_keys([345453013])

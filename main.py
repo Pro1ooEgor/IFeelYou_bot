@@ -125,6 +125,7 @@ def handle_text(message):
         bot.send_message(
             message.from_user.id,
             'Введите любую команду. \nПолный список команд /help \nЧтобы начать тест /test')
+    # коннектиться два id
     if message.text == 'в паре':
         users[message.from_user.id]._change_status(0)
         users[message.from_user.id]._set_mode('в паре')
@@ -205,11 +206,12 @@ def handle_text(message):
                 if users[message.from_user.id].pagination > 6:
                     users[message.from_user.id]._change_pagination(0)
                 user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
+                # выводит 4 варианта ответа
                 for i in range(1, opinions[opinion]['description']['len']+1):
                     user_markup.row(
                         opinions[opinion]['description'][i][users[message.from_user.id].pagination]
                     )
-                # выводит инфу о текущей странице вариантов
+                # page -  инфа о текущей странице вариантов
                 page = 'варианты [' + str(users[message.from_user.id].pagination + 1) + '/7]'
                 if users[message.from_user.id].just_begin:
                     bot.send_message(message.from_user.id, text=f'{opinion.capitalize()} это как?', reply_markup=user_markup)
@@ -231,7 +233,6 @@ def handle_text(message):
                 user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
                 for i in range(1, 5):
                     user_markup.row(opinions[opinion]['state_is'][i][users[message.from_user.id].pagination])
-                # выводит инфу о текущей странице вариантов
                 page = 'варианты [' + str(users[message.from_user.id].pagination + 1) + '/14]'
                 if users[message.from_user.id].just_begin:
                     if opinion == 'клево':
