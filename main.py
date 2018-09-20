@@ -106,15 +106,26 @@ def handle_text(message):
     user_markup.row('соло')
     user_markup.row('в паре')
     bot.send_message(message.from_user.id, 'Пройти в соло или в паре?', reply_markup=user_markup)
+    try:
+        users[message.from_user.id]._change_status(0)
+    except:
+        logging.info(f'Sent /stop + added new user {message.from_user.id}')
+        user = User(message.from_user.id)
+        user._change_status(0)
+        users[message.from_user.id] = user
     return
 
 
 @bot.message_handler(content_types='text')
 def handle_text(message):
+    if message.from_user.id not in users:
+        user = User(message.from_user.id)
+        users[message.from_user.id] = user
+    if users[message.from_user.id].status == None:
+        bot.send_message(
+            message.from_user.id,
+            'Введите любую команду. \nПолный список команд /help \nЧтобы начать тест /test')
     if message.text == 'в паре':
-        if message.from_user.id not in users:
-            user = User(message.from_user.id)
-            users[message.from_user.id] = user
         users[message.from_user.id]._change_status(0)
         users[message.from_user.id]._set_mode('в паре')
         bot.send_message(
@@ -198,10 +209,13 @@ def handle_text(message):
                     user_markup.row(
                         opinions[opinion]['description'][i][users[message.from_user.id].pagination]
                     )
+                # выводит инфу о текущей странице вариантов
+                page = 'варианты [' + str(users[message.from_user.id].pagination + 1) + '/7]'
                 if users[message.from_user.id].just_begin:
                     bot.send_message(message.from_user.id, text=f'{opinion.capitalize()} это как?', reply_markup=user_markup)
+                    bot.send_message(message.from_user.id, page)
                 else:
-                    bot.send_message(message.from_user.id, text='..', reply_markup=user_markup)
+                    bot.send_message(message.from_user.id, text=page, reply_markup=user_markup)
                 users[message.from_user.id].just_begin = False
                 users[message.from_user.id].pagination += 1
             else:
@@ -217,6 +231,8 @@ def handle_text(message):
                 user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
                 for i in range(1, 5):
                     user_markup.row(opinions[opinion]['state_is'][i][users[message.from_user.id].pagination])
+                # выводит инфу о текущей странице вариантов
+                page = 'варианты [' + str(users[message.from_user.id].pagination + 1) + '/14]'
                 if users[message.from_user.id].just_begin:
                     if opinion == 'клево':
                         bot.send_message(
@@ -230,8 +246,9 @@ def handle_text(message):
                             text='Что могло бы сейчас тебе поднять настроение?',
                             reply_markup=user_markup
                         )
+                    bot.send_message(message.from_user.id, page)
                 else:
-                    bot.send_message(message.from_user.id, '..', reply_markup=user_markup)
+                    bot.send_message(message.from_user.id, page, reply_markup=user_markup)
                 users[message.from_user.id].pagination += 1
                 users[message.from_user.id].just_begin = False
             else:
@@ -303,6 +320,7 @@ def handle_text(message):
                         time.sleep(1)
     except Exception as e:
         logging.info(e.args)
+        raise e
 
 
 def main():

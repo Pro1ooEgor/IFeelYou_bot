@@ -118,3 +118,710 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.telegram.org'
 
 INFO:root:(MaxRetryError("HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot615773178:AAHUIX7K59zMi1uKzjNQw221fT1bRSe90rY/getUpdates?offset=1&timeout=20 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f04daeae630>: Failed to establish a new connection: [Errno 101] Network is unreachable',))",),)
 INFO:root:FINISH
+INFO:root:START
+ERROR:TeleBot:ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\__init__.py", line 276, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\__init__.py", line 246, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 180, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 56, in _make_request
+    return _check_result(method_name, result)['result']
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 75, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+ERROR:TeleBot:A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+ERROR:TeleBot:ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\__init__.py", line 276, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\__init__.py", line 246, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 180, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 56, in _make_request
+    return _check_result(method_name, result)['result']
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 75, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+ERROR:TeleBot:A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+ERROR:TeleBot:ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\__init__.py", line 276, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\__init__.py", line 246, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 180, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 56, in _make_request
+    return _check_result(method_name, result)['result']
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 75, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+ERROR:TeleBot:A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+INFO:root:START
+INFO:root:Sent /stop + added new user 297000743
+INFO:root:START
+INFO:root:dict_keys([])
+INFO:root:(345453013,)
+INFO:root:dict_keys([])
+ERROR:TeleBot:ReadTimeout occurred, args=(ReadTimeoutError("HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=30)",),)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 384, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 380, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 1009, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 871, in read
+    return self._sslobj.read(len, buffer)
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 631, in read
+    v = self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\requests\adapters.py", line 445, in send
+    timeout=timeout
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\util\retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\packages\six.py", line 686, in reraise
+    raise value
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 306, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\__init__.py", line 276, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\__init__.py", line 246, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 180, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 54, in _make_request
+    timeout=(connect_timeout, read_timeout), proxies=proxy)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\requests\sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\requests\sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\requests\adapters.py", line 526, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=30)
+
+INFO:root:(ReadTimeoutError("HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=30)",),)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:(345453013,)
+INFO:root:dict_keys([])
+INFO:root:(345453013,)
+INFO:root:(345453013,)
+INFO:root:(345453013,)
+INFO:root:(345453013,)
+INFO:root:START
+INFO:root:(345453013,)
+INFO:root:(345453013,)
+INFO:root:START
+INFO:root:dict_keys([])
+INFO:root:START
+INFO:root:(345453013,)
+INFO:root:START
+INFO:root:(345453013,)
+INFO:root:START
+INFO:root:(345453013,)
+INFO:root:START
+ERROR:TeleBot:ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\__init__.py", line 276, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\__init__.py", line 246, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 180, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 56, in _make_request
+    return _check_result(method_name, result)['result']
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 75, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+ERROR:TeleBot:A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+INFO:root:START
+INFO:root:(345453013,)
+INFO:root:START
+INFO:root:(345453013,)
+INFO:root:dict_keys([])
+INFO:root:START
+INFO:root:(345453013,)
+INFO:root:dict_keys([])
+INFO:root:START
+INFO:root:(345453013,)
+INFO:root:dict_keys([])
+INFO:root:START
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 139, in handle_text
+    elif users[message.from_user.id].status == 0:
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 139, in handle_text
+    elif users[message.from_user.id].status == null:
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 139, in handle_text
+    elif users[message.from_user.id].status == 0:
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:START
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 114, in handle_text
+    print(users[message.from_user.id].status)
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 114, in handle_text
+    print(users[message.from_user.id].status)
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 115, in handle_text
+    print(users[message.from_user.id].status)
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 114, in handle_text
+    print(users[message.from_user.id])
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+ERROR:TeleBot:UnboundLocalError occurred, args=("local variable 'user' referenced before assignment",)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 114, in handle_text
+    print(user[message.from_user.id])
+UnboundLocalError: local variable 'user' referenced before assignment
+
+INFO:root:("local variable 'user' referenced before assignment",)
+INFO:root:FINISH
+INFO:root:START
+ERROR:TeleBot:TypeError occurred, args=("'dict' object is not callable",)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 114, in handle_text
+    print(users())
+TypeError: 'dict' object is not callable
+
+INFO:root:("'dict' object is not callable",)
+INFO:root:FINISH
+INFO:root:START
+ERROR:TeleBot:TypeError occurred, args=("'dict' object is not callable",)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 114, in handle_text
+    print(users())
+TypeError: 'dict' object is not callable
+
+INFO:root:("'dict' object is not callable",)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:START
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:(5,)
+INFO:root:(5,)
+INFO:root:(5,)
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:(5,)
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:5
+INFO:root:START
+INFO:root:START
+INFO:root:START
+INFO:root:dict_keys([])
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 109, in handle_text
+    users[message.from_user.id]._change_status(0)
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:5
+ERROR:TeleBot:KeyError occurred, args=(5,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 317, in handle_text
+    raise e
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 209, in handle_text
+    opinions[opinion]['description'][i+1][
+KeyError: 5
+
+INFO:root:(5,)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:dict_keys([])
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 109, in handle_text
+    users[message.from_user.id]._change_status(0)
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+ERROR:TeleBot:TypeError occurred, args=('with_traceback() takes exactly one argument (0 given)',)
+Traceback (most recent call last):
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 209, in handle_text
+    opinions[opinion]['description'][i+1][
+KeyError: 5
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 316, in handle_text
+    logging.info(e.with_traceback())
+TypeError: with_traceback() takes exactly one argument (0 given)
+
+INFO:root:('with_traceback() takes exactly one argument (0 given)',)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:dict_keys([345453013])
+ERROR:TeleBot:TypeError occurred, args=('with_traceback() takes no keyword arguments',)
+Traceback (most recent call last):
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 209, in handle_text
+    opinions[opinion]['description'][i+1][
+KeyError: 5
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 317, in handle_text
+    logging.info(e.with_traceback(tb=x))
+TypeError: with_traceback() takes no keyword arguments
+
+INFO:root:('with_traceback() takes no keyword arguments',)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:(5,)
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:(5,)
+ERROR:TeleBot:KeyError occurred, args=(5,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 317, in handle_text
+    raise e
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 209, in handle_text
+    opinions[opinion]['description'][i+1][
+KeyError: 5
+
+INFO:root:(5,)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:dict_keys([])
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 109, in handle_text
+    users[message.from_user.id]._change_status(0)
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:("unsupported operand type(s) for +: 'int' and 'str'",)
+INFO:root:START
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:("unsupported operand type(s) for +: 'int' and 'str'",)
+INFO:root:START
+INFO:root:dict_keys([])
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 109, in handle_text
+    users[message.from_user.id]._change_status(0)
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:("unsupported operand type(s) for +: 'int' and 'str'",)
+INFO:root:("unsupported operand type(s) for +: 'int' and 'str'",)
+INFO:root:START
+INFO:root:dict_keys([])
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 109, in handle_text
+    users[message.from_user.id]._change_status(0)
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:('must be str, not int',)
+INFO:root:dict_keys([345453013])
+INFO:root:('must be str, not int',)
+INFO:root:START
+INFO:root:dict_keys([])
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 110, in handle_text
+    users[message.from_user.id]._change_status(0)
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:('must be str, not int',)
+INFO:root:('must be str, not int',)
+INFO:root:('must be str, not int',)
+INFO:root:('must be str, not int',)
+INFO:root:('must be str, not int',)
+INFO:root:START
+INFO:root:dict_keys([])
+INFO:root:START
+INFO:root:('must be str, not int',)
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:('must be str, not int',)
+INFO:root:START
+INFO:root:dict_keys([])
+INFO:root:('must be str, not int',)
+INFO:root:START
+INFO:root:dict_keys([])
+ERROR:TeleBot:ReadTimeout occurred, args=(ReadTimeoutError("HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=3.5)",),)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 849, in _validate_conn
+    conn.connect()
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connection.py", line 356, in connect
+    ssl_context=context)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\util\ssl_.py", line 359, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "C:\Users\Egor\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:817: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\requests\adapters.py", line 445, in send
+    timeout=timeout
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\util\retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\packages\six.py", line 686, in reraise
+    raise value
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 346, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\urllib3\connectionpool.py", line 306, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=3.5)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 108, in handle_text
+    bot.send_message(message.from_user.id, 'Пройти в соло или в паре?', reply_markup=user_markup)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\__init__.py", line 598, in send_message
+    reply_markup, parse_mode, disable_notification))
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 140, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 54, in _make_request
+    timeout=(connect_timeout, read_timeout), proxies=proxy)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\requests\sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\requests\sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\requests\adapters.py", line 526, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=3.5)
+
+INFO:root:(ReadTimeoutError("HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=3.5)",),)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:dict_keys([])
+INFO:root:('must be str, not int',)
+INFO:root:START
+INFO:root:START
+INFO:root:dict_keys([])
+INFO:root:('must be str, not int',)
+INFO:root:START
+INFO:root:dict_keys([])
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 110, in handle_text
+    users[message.from_user.id]._change_status(0)
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:('must be str, not int',)
+INFO:root:START
+INFO:root:dict_keys([])
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 113, in handle_text
+    users[message.from_user.id].change_status(0)
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:('must be str, not int',)
+ERROR:root:('must be str, not int',)
+INFO:root:START
+ERROR:TeleBot:ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\__init__.py", line 276, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\__init__.py", line 246, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 180, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 56, in _make_request
+    return _check_result(method_name, result)['result']
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\apihelper.py", line 75, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+ERROR:TeleBot:A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+INFO:root:START
+INFO:root:dict_keys([])
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 113, in handle_text
+    users[message.from_user.id].change_status(0)
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:('must be str, not int',)
+ERROR:TeleBot:TypeError occurred, args=('must be str, not int',)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 314, in handle_text
+    raise e
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 207, in handle_text
+    opinions[opinion]['description'][4][0] + '[ ' + users[message.from_user.id].pagination + ' /5 ]'
+TypeError: must be str, not int
+
+INFO:root:('must be str, not int',)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:dict_keys([])
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 109, in handle_text
+    users[message.from_user.id]._change_status(0)
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:START
+INFO:root:dict_keys([])
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 109, in handle_text
+    users[message.from_user.id]._change_status(0)
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:START
+INFO:root:dict_keys([])
+ERROR:TeleBot:KeyError occurred, args=(345453013,)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 109, in handle_text
+    users[message.from_user.id]._change_status(0)
+KeyError: 345453013
+
+INFO:root:(345453013,)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:START
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:('must be str, not int',)
+ERROR:TeleBot:TypeError occurred, args=('must be str, not int',)
+Traceback (most recent call last):
+  File "C:\Users\Egor\PycharmProjects\telegram_bot\venv\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 313, in handle_text
+    raise e
+  File "C:/Users/Egor/PycharmProjects/ifeelyou/ifeelyou/main.py", line 206, in handle_text
+    page = 'страница [' + str(users[message.from_user.id].pagination) + '/5]' + 1
+TypeError: must be str, not int
+
+INFO:root:('must be str, not int',)
+INFO:root:FINISH
+INFO:root:START
+INFO:root:dict_keys([])
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:START
+INFO:root:START
+INFO:root:dict_keys([345453013])
+INFO:root:START
+INFO:root:START
+INFO:root:START
+INFO:root:START
+INFO:root:START
+INFO:root:START
+INFO:root:START
+INFO:root:START
+INFO:root:START
+INFO:root:START
